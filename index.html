@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta width="device-width" initial-scale="1.0">
+    <meta charset="utf-8">
+    <title>Ερωτηματολόγιο</title>
+    <link rel="preload" href="./Images/bgi2.jpg" as="image">
+    <link rel="preload" href="./Images/i1.jpeg" as="image">
+    <link rel="preload" href="./Images/i2.jpeg" as="image">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="welcome-card-border">
+        <div class="welcome-card">
+            <div class="welcome-card-title">
+                <span>Ερωτηματολόγιο</span>
+            </div>
+            <div class="welcome-card-content">
+                <div class="welcome-card-left">
+                    <img src="./Images/i1.jpeg" alt="Ilustration">
+                </div>
+                <div class="welcome-card-right">
+                    <div class="overview-card">
+                        <h2>Περιλαμβάνονται ερωτήσεις:</h2>
+                        <p>
+                            <i class="fa-solid fa-hand-point-right"></i> Σωστού λάθους
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-hand-point-right"></i> Πολλαπλής επιλογής
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-hand-point-right"></i> Συμπλήρωσης κενού
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-hand-point-right"></i> Διάταξης
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-hand-point-right"></i> Αντιστοίχισης
+                        </p>
+                        <button type="button" id="quiz-start-btn" onclick="createQuiz()">Έναρξη</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="quiz-border">
+        <div id="quiz-container">
+            <div id="quiz-header">
+                <div id="quiz-header-title">
+                    <span>Ερώτηση <span id="question-title"></span> από 6</span>
+                </div>
+                <div id="timer-text">Χρόνος:&nbsp;<span id="timer"></span></div>
+            </div>
+            <div id="quiz-content">
+
+            </div>
+            <div id="quiz-footer">
+                <button type="button" id="previous-btn" onclick="previousQuestion()">Προηγούμενη</button>
+                <button type="button" id="check-btn" onclick="checkAnswers()">Οριστική υποβολή</button>
+                <button type="button" id="next-btn" onclick="nextQuestion()">Επόμενη</button>
+            </div>
+        </div>
+    </div>
+    <div id="results-modal-container">
+        <div class="results-modal-border">
+            <div class="results">
+                <div class="results-title">
+                    <span>Αποτελέσματα</span>
+                </div>
+                <div class="results-content">
+                    <div class="results-left">
+                        <img src="./Images/i2.jpeg" alt="Ilustration">
+                    </div>
+                    <div class="results-right">
+                        <div class="results-card">
+                            <h2>Τα αποτελέσματα σου:</h2>
+                            <p>
+                                <i class="fa-solid fa-hand-point-right"></i> Σωστές απαντήσεις: <span
+                                    id="correct-answers"></span>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-hand-point-right"></i> Λάθος απαντήσεις: <span
+                                    id="wrong-answers"></span>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-hand-point-right"></i> Ποσοστό επιτυχίας: <span
+                                    id="success-rate"></span>%
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-hand-point-right"></i> Συνολικός χρόνος: <span
+                                    id="total-time"></span>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-hand-point-right"></i> Διαθέσιμος χρόνος: <span
+                                    id="available-time"></span>
+                            </p>
+                            <button type="button" id="restart-btn" onclick=" window.location.reload();">Επανεκκίνηση</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/b0e6d03781.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-sortablejs@latest/jquery-sortable.js"></script>
+<script src="headscript.js"></script>
+
+</html>
